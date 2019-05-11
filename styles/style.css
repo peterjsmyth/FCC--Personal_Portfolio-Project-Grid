@@ -43,6 +43,10 @@ input:-webkit-autofill:active  {
     -webkit-text-fill-color: var(--accent) !important;
 }
 
+.wrapper-page {
+  position: relative;
+}
+
 .scrollTopBtn {
   display: none;
   font-size: 3rem;
@@ -59,11 +63,27 @@ input:-webkit-autofill:active  {
   color: var(--accent);
 }
 
+.hamburger {
+  color: var(--light);
+  display: none;
+  font-size: 2em;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2
+}
+
+.hamburger:hover {
+  color: var(--accent);
+  text-shadow: 0 0 20px #d65a31;
+}
+
 /* Navbar CSS */
 .navbar {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(6, auto);
+  position: relative;
 }
 
 .navbar a {
@@ -465,11 +485,33 @@ footer .social i:hover:active {
   text-shadow: 0 0 5px var(--light);
 }
 
+/* Media Query min 800 */
+@media (min-width: 800px) {
+  .navbar {
+    display: grid;
+  }
+}
+
+/* Media Query 800 ============================================================ */
 @media(max-width: 800px) {
+
+  .hamburger {
+    color: var(--light);
+    display: block;
+    padding-right: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .hamburger:hover {
+    color: var(--accent);
+    text-shadow: 0 0 20px #d65a31;
+  }
 
   /* Navbar CSS 800px */
   .navbar {
-    display: grid;
+    display: none;
     grid-gap: 10px;
     grid-template-columns: auto;
     grid-template-rows: repeat(6, auto);
@@ -478,6 +520,10 @@ footer .social i:hover:active {
   .navbar a {
     background-color: var(--lightdark);
     border-radius: 5px;
+  }
+
+  .nav-links {
+    display: block;
   }
 
   /* Welcome Section 800px */
@@ -574,7 +620,7 @@ footer .social i:hover:active {
 
 }
 
-
+/* Media Query 600 ============================================================ */
 @media(max-width: 600px) {
 
   /* Portfolio Section CSS */
