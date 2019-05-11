@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='./scripts/main.js'>
+
+    </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
@@ -12,7 +16,7 @@
   <body>
 
     <main class="wrapper-page"> <!-- Start of Page Wrapper -->
-
+      <i id='scrollTopBtn' title='Scroll to Top' class="scrollTopBtn fas fa-arrow-alt-circle-up"></i>
       <nav id="navbar" class="navbar"> <!-- Start of Navbar section -->
         <a href="#" class="nav-links">Home</a>
         <a href="#projects" class="nav-links">Portfolio</a>
@@ -173,206 +177,208 @@
 
       <section id="skills" class="skills-section"> <!-- Start of Skills section -->
         <h1>Skills</h1>
-        <article class="skills-gis-apps">
-          <h2>GIS Apps</h2>
-          <div class="skills-app-wrapper">
-            <h3>ArcGIS Desktop</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
+        <div class="skills-wrapper">
+          <article class="skills-apps col-1">
+            <h2>GIS Apps</h2>
+            <div class="skills-app-wrapper">
+              <h3>ArcGIS Desktop</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <h3>ArcGIS Pro</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <h3>ArcGIS Pro</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <h3>ArcGIS Server</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <h3>ArcGIS Server</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <h3>Web AppBuilder</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <h3>Web AppBuilder</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <h3>ArcGIS Online</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <h3>ArcGIS Online</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <h3>Portal for ArcGIS</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <h3>Portal for ArcGIS</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <h3>Geocortex</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <h3>Geocortex</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="skills-other-apps">
-          <h2>Other Apps</h2>
-          <div class="skills-app-wrapper">
-            <h3>Word</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
+          <article class="skills-apps col-2">
+            <h2>Other Apps</h2>
+            <div class="skills-app-wrapper">
+              <h3>Word</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <h3>Excel</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <h3>Excel</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <h3>Atom</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <h3>Atom</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <h3>Github</h3>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <h3>Github</h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="skills-lang-apps">
-          <h2>Languages / Frameworks</h2>
-          <div class="skills-app-wrapper">
-            <div class="lang">
-              <i class="fab fa-html5 fa-lg"></i>
-              <h3>HTML</h3>
+          <article class="skills-apps col-3">
+            <h2>Languages</h2>
+            <div class="skills-app-wrapper">
+              <div class="lang">
+                <i class="fab fa-html5 fa-lg"></i>
+                <h3>HTML</h3>
+              </div>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <div class="lang">
+                <i class="fab fa-css3-alt fa-lg"></i>
+                <h3>CSS</h3>
+              </div>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <div class="lang">
-              <i class="fab fa-css3-alt fa-lg"></i>
-              <h3>CSS</h3>
+            <div class="skills-app-wrapper">
+              <div class="lang">
+                <i class="fab fa-js-square fa-lg"></i>
+                <h3>Javascript</h3>
+              </div>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
+            <div class="skills-app-wrapper">
+              <div class="lang">
+                <i class="fab fa-python fa-lg"></i>
+                <h3>Python</h3>
+              </div>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <div class="lang">
-              <i class="fab fa-js-square fa-lg"></i>
-              <h3>Javascript</h3>
-            </div>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-          <div class="skills-app-wrapper">
-            <div class="lang">
-              <i class="fab fa-python fa-lg"></i>
-              <h3>Python</h3>
-            </div>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </section>  <!-- End of Skills section -->
 
       <section id="facts" class="fun-facts-section"> <!-- Start of Fun Facts section -->
-        <h2>Fun Facts</h2>
+        <h1>Fun Facts</h1>
         <div class="facts-wrapper">
-          <div class="fact-card">
+          <div class="fact-card fact-card-1">
             <h3>Fact Name</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus
               accusantium architecto veritatis, ex provident saepe facere vitae, magni
               possimus reprehenderit incidunt minus! Deleniti architecto, quo, nulla
               esse commodi atque consequatur.</p>
           </div>
-          <div class="fact-card">
+          <div class="fact-card fact-card-2">
             <h3>Fact Name</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus
               accusantium architecto veritatis, ex provident saepe facere vitae, magni
               possimus reprehenderit incidunt minus! Deleniti architecto, quo, nulla
               esse commodi atque consequatur.</p>
           </div>
-          <div class="fact-card">
+          <div class="fact-card fact-card-3">
             <h3>Fact Name</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus
               accusantium architecto veritatis, ex provident saepe facere vitae, magni
               possimus reprehenderit incidunt minus! Deleniti architecto, quo, nulla
               esse commodi atque consequatur.</p>
           </div>
-          <div class="fact-card">
+          <div class="fact-card fact-card-4">
             <h3>Fact Name</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus
               accusantium architecto veritatis, ex provident saepe facere vitae, magni
@@ -383,24 +389,27 @@
       </section>  <!-- End of Fun Facts section -->
 
       <section id="contact" class="contact"> <!-- Start of Contacts section -->
-        <img src="https://source.unsplash.com/collection/3322012/600x600" alt="">
-        <form class="contact-form-elements">
-          <input type="text" name='firstname' placeholder="First Name" autocomplete="on">
-          <input type="text" name='lastname' placeholder="Last Name" autocomplete="on">
-          <input type="email" name='firstname' placeholder="What's your email?" autocomplete="on">
-          <textarea name="tell-us" rows="20" cols="80" placeholder="What do you want to ask me?"></textarea>
-          <button type="button" name="submit">On Your Way</button>
-        </form>
+        <h1>Contact Me</h1>
+        <div class="contact-content">
+          <img src="https://source.unsplash.com/collection/3322012/600x600" alt="">
+          <form class="contact-form-elements">
+            <input type="text" name='firstname' placeholder="First Name" autocomplete="on">
+            <input type="text" name='lastname' placeholder="Last Name" autocomplete="on">
+            <input type="email" name='firstname' placeholder="What's your email?" autocomplete="on">
+            <textarea name="tell-us" rows="8" placeholder="What do you want to ask me?"></textarea>
+            <button type="button" name="submit"><i class="fas fa-paper-plane"></i>Send it!</button>
+          </form>
+        </div>
       </section> <!-- End of Contacts section -->
 
       <footer id="foot" class="footer"> <!-- Start of Footer -->
         <h2>&copy; Pete Smyth 2019</h2>
         <article class="social">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-github-alt"></i>
-          <i class="fab fa-free-code-camp"></i>
+          <a href="https://www.facebook.com/peter.smyth" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/peterjsmyth" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/peterjsmyth" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/peterjsmyth" target="_blank"><i class="fab fa-github-alt"></i></a>
+          <a href="https://www.freecodecamp.org/peterjsmyth" target="_blank"><i class="fab fa-free-code-camp"></i></a>
         </article>
       </footer> <!-- End of Footer -->
 
