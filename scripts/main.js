@@ -1,11 +1,13 @@
 $(document).ready(function() {
 
   function openNav() {
+    document.getElementById("navCont").style.display = "block";
     document.getElementById("navbar").style.display = "grid";
   }
 
   function closeNav() {
     document.getElementById("navbar").style.display = "none";
+    document.getElementById("navCont").style.display = "none";
   }
 
   function closeHamburger() {
@@ -76,6 +78,18 @@ $(document).ready(function() {
     }
   });
 
+
+  // Word Rotator
+  let words = ["Web Developer", "Spatial Analyst", "Lifelong Learner", "GIS Administrator"];
+  let element = $('#role');
+  let currentword = -1;
+
+  window.setInterval(function(){
+    currentword++;
+    if (currentword > words.length-1) currentword = 0;
+    element.text(words[currentword]);
+    // console.log(element.text() + 'Currentword: '+currentword);
+  }, 4000);
 
 
 });
