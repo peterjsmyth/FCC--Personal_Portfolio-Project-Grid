@@ -5,26 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src='./scripts/main.js'>
+    <script src='./scripts/main.js'></script>
 
-    </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Pete's Portfolio</title>
   </head>
-  <body>
+  <body id="wrapper-page"
 
-    <main class="wrapper-page"> <!-- Start of Page Wrapper -->
+    <main  class="wrapper-page"> <!-- Start of Page Wrapper -->
       <i id='scrollTopBtn' title='Scroll to Top' class="scrollTopBtn fas fa-arrow-alt-circle-up"></i>
       <a href="#" id="hamburger" class="hamburger-anchor"><i class="hamburger fas fa-bars"></i></a>
-      <nav id="navbar" class="navbar"> <!-- Start of Navbar section -->
-        <a href="#" class="nav-links">Home</a>
-        <a href="#projects" class="nav-links">Portfolio</a>
-        <a href="#resume" class="nav-links">Resume</a>
-        <a href="#skills" class="nav-links">Skills</a>
-        <a href="#facts" class="nav-links">Fun Facts</a>
-        <a href="#contact" class="nav-links">Contact</a>
+      <nav id="navCont" class="navbar"> <!-- Start of Navbar section -->
+        <div  id="navbar" class="navbar-container">
+          <a href="#wrapper-page" class="nav-links">Home</a>
+          <a href="#projects" class="nav-links">Portfolio</a>
+          <a href="#resume" class="nav-links">Resume</a>
+          <a href="#skills" class="nav-links">Skills</a>
+          <a href="#facts" class="nav-links">Fun Facts</a>
+          <a href="#contact" class="nav-links">Contact</a>
+        </div>
       </nav> <!-- End of Navbar section -->
 
       <section id="welcome-section" class="welcome-section"> <!-- Start of Welcome section -->
@@ -34,14 +35,14 @@
           <h4>My name is</h4>
           <h1>Pete Smyth</h1>
           <h4>I am a</h4>
-          <h1>GIS Administrator</h1>
+          <h1 id="role">GIS Administrator</h1>
         </div>
       </section> <!-- End of Welcome section -->
 
       <section id="projects" class="portfolio-section"> <!-- Start of Portfolio  section -->
-        <article class="portfolio-card">
+        <article class="portfolio-card project-tile">
           <img src="https://source.unsplash.com/collection/4711693/320x240" alt="random unsplash image">
-          <h2>Tribute Page</h2>
+          <a href="https://codepen.io/pen/JVBXJa" target="_blank"><h2>Tribute Page</h2></a>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dolorum
             obcaecati officiis iusto adipisci debitis vitae ut soluta corporis repellat
             quidem, ratione praesentium reiciendis sed at animi dolorem optio sunt!</p>
@@ -409,11 +410,10 @@
           <a href="https://www.facebook.com/peter.smyth" target="_blank"><i class="fab fa-facebook-f"></i></a>
           <a href="https://twitter.com/peterjsmyth" target="_blank"><i class="fab fa-twitter"></i></a>
           <a href="https://www.instagram.com/peterjsmyth" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/peterjsmyth" target="_blank"><i class="fab fa-github-alt"></i></a>
+          <a href="https://github.com/peterjsmyth" target="_blank" id="profile-link"><i class="fab fa-github-alt"></i></a>
           <a href="https://www.freecodecamp.org/peterjsmyth" target="_blank"><i class="fab fa-free-code-camp"></i></a>
         </article>
       </footer> <!-- End of Footer -->
-
     </main> <!-- End of Page Wrapper -->
 
 

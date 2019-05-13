@@ -6,15 +6,16 @@ font-family: 'Open Sans', sans-serif;
 /* CSS Variables */
 
 :root {
-    --maindark: rgba(34,40,49,1);
-    --lightdark: rgba(57,62,70,1);
-    --accent: rgba(214,90,49,1);
-    --accent-t50: rgba(214,90,49,0.5);
-    --light: rgba(238,238,238,1);
-    --light-t75: rgba(238,238,238,0.75);
-    --light-t50: rgba(238,238,238,0.5);
-    --light-t0: rgba(238,238,238,0);
-    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --maindark: rgba(34,40,49,1);
+  --maindark-t80: rgba(34,40,49,0.9);
+  --lightdark: rgba(57,62,70,1);
+  --accent: rgba(214,90,49,1);
+  --accent-t50: rgba(214,90,49,0.5);
+  --light: rgba(238,238,238,1);
+  --light-t75: rgba(238,238,238,0.75);
+  --light-t50: rgba(238,238,238,0.5);
+  --light-t0: rgba(238,238,238,0);
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
 
@@ -45,6 +46,7 @@ input:-webkit-autofill:active  {
 
 .wrapper-page {
   position: relative;
+  border-top: 1px solid rgba(0,0,0,0);
 }
 
 .scrollTopBtn {
@@ -57,6 +59,7 @@ input:-webkit-autofill:active  {
   border-radius: 50%;
   cursor: pointer;
   opacity: 0.5;
+  z-index: 10;
 }
 
 .scrollTopBtn:hover {
@@ -79,21 +82,36 @@ input:-webkit-autofill:active  {
 }
 
 /* Navbar CSS */
+
 .navbar {
+
+  /* border: 1px red solid; */
+  background-color: var(--maindark);
+  /* width: 100vw; */
+  /* height: 100vh; */
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0;
+}
+
+.navbar-container {
+  padding-top: 30px;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(6, auto);
-  position: relative;
+
+
 }
 
-.navbar a {
+.navbar-container a {
   color: var(--light);
   font-size: 2rem;
   text-align: center;
   text-decoration: none;
 }
 
-.navbar a:hover {
+.navbar-container a:hover {
   color: var(--accent);
   font-size: 2rem;
   text-shadow: 0 0 20px #d65a31;
@@ -104,8 +122,10 @@ input:-webkit-autofill:active  {
 .welcome-section {
   display: grid;
   grid-gap: 30px;
+  height: 100vh;
   grid-template-columns: repeat(2, 1fr);
-  margin: 50px 0;
+  /* margin:120px 0; */
+  /* border: 1px red solid; */
 }
 
 .welcome-section img {
@@ -139,6 +159,7 @@ input:-webkit-autofill:active  {
   //flex-wrap: wrap;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
+  padding-top: 90px;
 }
 
 .portfolio-card {
@@ -152,6 +173,10 @@ input:-webkit-autofill:active  {
   width: 100%;
   border-radius: 5px;
   border: 1px solid var(--accent);
+}
+
+.portfolio-card a {
+  text-decoration: none;
 }
 
 .portfolio-card h2 {
@@ -173,6 +198,7 @@ input:-webkit-autofill:active  {
   grid-template-rows: repeat(auto, 1fr);
   grid-gap: 30px;
   margin-top: 50px;
+  padding-top: 90px;
 }
 
 .resume-section h1 {
@@ -221,6 +247,7 @@ input:-webkit-autofill:active  {
   grid-template-rows: repeat(2, auto);
   grid-gap: 30px;
   margin-top: 50px;
+  padding-top: 90px;
 }
 
 .skills-section h1 {
@@ -300,6 +327,7 @@ color: var(--accent);
   grid-template-rows: repeat(2, auto);
   grid-gap: 30px;
   margin-top: 50px;
+  padding-top: 90px;
 }
 
 .fun-facts-section h1 {
@@ -347,6 +375,7 @@ color: var(--accent);
   padding-top: 50px;
   display: grid;
   grid-template-rows: auto 1fr;
+  padding-top: 90px;
 }
 
 .contact h1 {
@@ -487,7 +516,7 @@ footer .social i:hover:active {
 
 /* Media Query min 800 */
 @media (min-width: 800px) {
-  .navbar {
+  .navbar-container {
     display: grid;
   }
 }
@@ -510,14 +539,21 @@ footer .social i:hover:active {
   }
 
   /* Navbar CSS 800px */
+
   .navbar {
+    display: none;
+    background-color: var(--maindark-t80);
+    height: 100vh;
+  }
+
+  .navbar-container {
     display: none;
     grid-gap: 10px;
     grid-template-columns: auto;
     grid-template-rows: repeat(6, auto);
   }
 
-  .navbar a {
+  .navbar-container a {
     background-color: var(--lightdark);
     border-radius: 5px;
   }
