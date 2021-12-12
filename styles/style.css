@@ -128,11 +128,17 @@ input:-webkit-autofill:active  {
   /* border: 1px red solid; */
 }
 
-.welcome-section img {
+.wrapper-image-content {
+  display: grid;
+}
+
+.wrapper-image-content img {
+  display: grid;
   border-radius: 50%;
   box-shadow: 0 0 20px var(--accent);
-  width: 100%;
+  width: 80%;
   align-self: center;
+  justify-self: center;
 }
 
 .welcome-section .wrapper-welcome-content {
